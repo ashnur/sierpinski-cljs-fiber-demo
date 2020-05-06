@@ -1,0 +1,5 @@
+node_modules/
+.shadow-cljs/
+.clj-kondo/.cache/
+**/.clj-kondo/
+public/js/cljs-runtime/

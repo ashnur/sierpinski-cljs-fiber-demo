@@ -1,0 +1,14 @@
+{ 
+  :source-paths ["src"]
+  :dependencies [[lilactown/helix "0.0.10"]
+                 [devcards "0.2.6"]]
+  :dev-http {3000 "public"}
+  :nrepl {:port 3333}
+  :builds { :latest {:asset-path "/js"
+                     :modules {:demo {:init-fn sierpinski.core/main}}
+                     :output-dir "public/js"
+                     :target :browser}
+            :experimental {:asset-path "/js"
+                           :modules {:demo {:init-fn sierpinski.core/main}}
+                           :output-dir "public/js"
+                           :target :browser}}}

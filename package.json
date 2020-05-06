@@ -1,0 +1,43 @@
+{
+  "name": "sierpinski-cljs-fiber-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sc": "shadow-cljs",
+    "server": "shadow-cljs stop && shadow-cljs start",
+    "start": "npm run start-experimental",
+    "start-latest": "shadow-cljs watch latest",
+    "start-experimental": "shadow-cljs watch experimental",
+    "cards": "shadow-cljs watch cards",
+    "build": "npm run clean && shadow-cljs release app",
+    "test": "shadow-cljs compile test && node out/test.js",
+    "test:watch": "shadow-cljs watch test --config-merge \"{:autorun true}\"",
+    "e2e": "shadow-cljs compile e2e && node out/e2e.js",
+    "report": "shadow-cljs run shadow.cljs.build-report app report.html",
+    "lint": "clj-kondo --lint src",
+    "format": "zprint-clj --hang -i \"./src/**/*.{clj,cljs,cljc,edn}\" -o ./ && zprint-clj -i \"./*.edn\" -o ./",
+    "clean": "rimraf public/js"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "latest",
+    "@testing-library/react": "latest",
+    "clj-kondo": "latest",
+    "create-react-class": "latest",
+    "highlight.js": "latest",
+    "jsdom": "latest",
+    "jsdom-global": "latest",
+    "marked": "latest",
+    "react": "0.0.0-experimental-e5d06e34b",
+    "react-dom": "0.0.0-experimental-e5d06e34b",
+    "react-refresh": "latest",
+    "rimraf": "latest",
+    "serve-handler": "latest",
+    "shadow-cljs": "^2.8.105",
+    "taiko": "latest",
+    "taiko-diagnostics": "latest",
+    "zprint-clj": "latest"
+  },
+  "dependencies": {
+    "create-react-class": "~15.6.3"
+  }
+}
