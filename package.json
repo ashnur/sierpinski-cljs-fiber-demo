@@ -27,7 +27,7 @@
     "jsdom": "latest",
     "jsdom-global": "latest",
     "marked": "latest",
-    "react": "0.0.0-experimental-e5d06e34b",
+    "react": "0.14.0",
     "react-dom": "0.0.0-experimental-e5d06e34b",
     "react-refresh": "latest",
     "rimraf": "latest",
